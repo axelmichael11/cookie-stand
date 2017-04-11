@@ -58,23 +58,22 @@ randomCookies: function() {
 },
 //results: [this.min,this.max,this.avgCookies,this.randomCustomers(), this.avgCookiesPerHr()],
 store_hours: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
-random_cookies_hr:
-[randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies(),randomCookies()]
 
-//listCreation: function(){
-//for (var i=0; i< 15; i++) {
+
+listCreation: function(){
+for (var i=0; i< 15; i++) {
   var results=[];
-  //store_hours: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
-  results.push(this.store_hours[i]+":"+this.randomCustomers());
+  store_hours: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+  results.push(this.store_hours[i]+":"+randomCookies());
   console.log(this.store_hours[i]);
-  //ALRIGHT... I have hit a roadblock... I want to write BOTH my functions I used before! like this.... this.store_hours[i]+":"+this.avgCookiesPerHr...But I cant! What is "this" object changing and why have I been able to use it before...
-  //var listItem = document.createElement('li');
-  //listItem.textContent= results[i];
-  //FIRSTANDPIKEUL.appendChild(listItem);
+  //ALRIGHT... I have hit a roadblock... I want to write BOTH my functions I used before! like this.... this.store_hours[i]+":"+this.avgCookiesPerHr, and then append the results to the results array! But I cant! What is "this" object changing and why have I been able to use it before...
+  var listItem = document.createElement('li');
+  listItem.textContent= results[i];
+  FIRSTANDPIKEUL.appendChild(listItem);
 }
 }
 }
 
-console.log(first_and_pike.random_cookies_hr);
+console.log(first_and_pike.listCreation);
 console.log(first_and_pike.randomCustomers());
 console.log(first_and_pike.randomCookies());

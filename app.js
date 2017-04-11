@@ -20,30 +20,49 @@ Within the product objects
     Ingredients
     Description
 */
-var cookies={};
 
-var chocolate ={};
-var lemon ={};
-var sugar ={};
+//
+// lemon.cookieName = 'salmon lemon biscuit';
+// lemon.bake_date ='4/10/17';
+// lemon.price = 4.99;
+// lemon.ingredients = ['salmon','lemons','eggs'];
+// lemon.description = 'yummy lemon and salmon, together!';
+//
+// sugar.cookieName = 'salmon sugar cookie';
+// sugar.bake_date ='4/10/17';
+// sugar.price = 1.99;
+// sugar.ingredients = ['salmon','cinnamon','sugar'];
+// sugar.description = 'delicious salmon and cinnamon sweet cookies, yum!';
 
-console.log(cookies);
+//NOTE: I totally missed the assignment domain page at the bottom! starting over!!!!
 
-chocolate.cookieName = 'salmon chocolate chip cookie';
-chocolate.bake_date ='4/10/17';
-chocolate.price = 2.99;
-chocolate.ingredients = ['salmon','chocolate chips','cookie dough'];
-chocolate.description = 'yummy salmon and choco chips! ma favorite combo';
+//1.
 
-lemon.cookieName = 'salmon lemon biscuit';
-lemon.bake_date ='4/10/17';
-lemon.price = 4.99;
-lemon.ingredients = ['salmon','lemons','eggs'];
-lemon.description = 'yummy lemon and salmon, together!';
+var store_hours={
+  times:['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm']
+}
+console.log(store_hours.length);
 
-sugar.cookieName = 'salmon sugar cookie';
-sugar.bake_date ='4/10/17';
-sugar.price = 1.99;
-sugar.ingredients = ['salmon','cinnamon','sugar'];
-sugar.description = 'delicious salmon and cinnamon sweet cookies, yum!';
+var FIRSTANDPIKE = document.getElementById('title');
 
-console.log(chocolate);
+var first_and_pike = {
+  min: 23,
+  max: 65,
+  avgCookies: 6.3,
+  hours: 0,
+  randomCustomers: function() {
+  return Math.floor(Math.random()*(this.max-this.min+1)+this.min);
+},
+avgCookiesPerHr: function() {
+  return Math.round(this.randomCustomers()*this.avgCookies);
+},
+results: [this.min, this.max, this.avgCookies,this.randomCustomers(), this.avgCookiesPerHr()],
+store_hours: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
+listCreation: function(){
+for (var i=0; i< 15; i++) {
+  console.log(this.store_hours[i]);
+}
+}
+
+
+console.log(first_and_pike.avgCookiesPerHr());

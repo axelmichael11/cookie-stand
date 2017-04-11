@@ -1,0 +1,11 @@
+/* reset */
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box; /*doesn't change based on margin or padding size... */
+}
+
+html, body { /* ' , 'selector is saying both, rather than being inside */
+
+}

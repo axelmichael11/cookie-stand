@@ -37,36 +37,76 @@ Within the product objects
 //NOTE: I totally missed the assignment domain page at the bottom! starting over!!!!
 
 //1.
-
-
+var store_hours= ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+/*
 var FIRSTANDPIKEUL = document.getElementById('first and pike');
 var SEATACAIRPORT = document.getElementById('SeaTac Airport');
 var SEATTLECENTER = document.getElementById('Seattle Center');
 var CAPITOLHILL = document.getElementById('Capitol Hill');
 var ALKI = document.getElementById('Alki');
-
+*/
 var first_and_pike = {
+  location:'1st and Pike',
+  header:'h2',
   min: 23,
   max: 65,
   avgCookies: 6.3,
-  store_hours: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   cookieshours: [],
   totalCookies:0,
   randomCustomers: function() {
-  return Math.floor(Math.random()*(this.max-this.min+1)+this.min);
-},
-randomCookiesPerHour: function() {
-  var totalCookies=0;
-  var cookieshours=[];
-  for(var i=0; i<14; i++) {
-  var avgCookies4Hour = Math.round(this.randomCustomers()*this.avgCookies);
-  //console.log(avgCookies4Hour);
-  this.cookieshours.push(avgCookies4Hour);
-}
-return this.cookieshours;
-},
-}
-console.log(first_and_pike.randomCookiesPerHour());
+    return Math.floor(Math.random()*(this.max-this.min+1)+this.min);
+  },
+
+  randomCookiesPerHour: function() {
+    for(var i=0; i<store_hours.length; i++) {
+      var avgCookies4Hour = Math.round(this.randomCustomers() * this.avgCookies);
+      this.totalCookies = this.totalCookies + avgCookies4Hour;
+      this.cookieshours.push(avgCookies4Hour);
+      console.log(avgCookies4Hour);
+    }
+  },
+  /*
+  results: function () {
+    for (var i = 0; i < store_hours.length; i++) {
+      store_hours[i]; //+ ':' + this.randomCookiesPerHour();
+    }
+    return store_hours;
+  } */
+  structureGenerator: function() {
+    var div = document.getElementsByClassName(this.location)[0];
+    var title = document.createElement(this.header);
+    title.textContent = this.location;
+    title.setAttribute('id','title');
+    //console.log(title);
+    div.appendChild(title);
+    console.log(div);
+    var ul = document.createElement('ul');
+    ul.setAttribute('id',this.location);
+    ul.textContent = this.location;
+    div.appendChild(ul);
+    // title.setAttribute('class','title');
+    // console.log(title);
+    // //var li= document.createElement('ul');
+    //
+    // title.textContent = this.location;
+    // title.setAttribute('class','title');
+    // console.log(title);
+  },
+
+  //structure: function () {
+    //var locationUl = document.getElementById(this.location);
+  //}
+
+};
+
+
+
+
+
+//first_and_pike.randomCookiesPerHour();
+//first_and_pike.results();
+console.log(first_and_pike.structureGenerator());
+//console.log(first_and_pike.totalCookies())
 /* this will create array, combining store_hours[i]+":"+randomCookiesPerHour[i];
 //results: function() {
 

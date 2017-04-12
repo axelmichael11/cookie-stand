@@ -82,13 +82,17 @@ function StoreLocation(location, min, max, avgCookies) {
 
 
 StoreLocation.prototype.getTable = function(){
-  var table = document.createElement('table');
-  var titleRow = document.createElement('tr');
-  var titleHeading = document.createElement('th');
-  titleHeading.textContent = this.location;
-  titleRow.appendChild(titleHeading);
-  table.appendChild(titleRow);
 
+//Ok! So this is all commented out, for one, because this is mostly Duncan's code from class! its the only example of us creating a table and from there I just tried to modify his model to fit my own. Ran into problems as soon as I started looping... FYI and I didn't really know how to start this
+  // var table = document.createElement('table');
+  // var titleRow = document.createElement('tr');
+  // var titleHeading = document.createElement('th');
+  // titleHeading.textContent = this.location;
+  // titleRow.appendChild(titleHeading);
+  // table.appendChild(titleRow);
+
+
+/*
   var Row, Store, value;
   // create a new row for each item and add it to the table
   for(var i = 0; i < this.store_names.length; i++){
@@ -99,13 +103,14 @@ StoreLocation.prototype.getTable = function(){
     Value.textContent = store_hours[i] + ': ' + this.cookieshours[i];
     itemPrice = document.createElement('td');
     itemPrice.textContent = this.items[i].price;
-    Row.appendChild(itemName);
-    Row.appendChild(itemPrice);
+    Row.appendChild(store);
+    Row.appendChild(Value);
     table.appendChild(Row);
   }
 
   return table;
 };
+*/
 
 var app = document.getElementById('app');
 

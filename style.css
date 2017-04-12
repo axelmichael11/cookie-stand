@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding:0;
+  font-family: Arial, Verdana;
   box-sizing: border-box; /*doesn't change based on margin or padding size... */
 }
 

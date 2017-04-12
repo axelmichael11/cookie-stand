@@ -3,10 +3,13 @@
 * {
   margin: 0;
   padding:0;
-  font-family: Arial, Verdana;
-  box-sizing: border-box; /*doesn't change based on margin or padding size... */
+  box-sizing: border-box;
 }
 
-html, body { /* ' , 'selector is saying both, rather than being inside */
+html, body {
+  height: 100%;
+}
 
+body {
+  background-color: lightblue;
 }

@@ -35,14 +35,14 @@ function StoreLocation(location, min, max, avgCookies) {
   this.min = min;
   this.max = max;
   this.avgCookies = avgCookies;
-  this.cookieshours= [];
-  this.totalCookies= 0;
+  this.cookieshours = [];
+  this.totalCookies = 0;
   this.data = [];
-  this.headers= [];
-  this.store_hours= ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
-};
-  StoreLocation.protoype.randomCustomers = function() {
-    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+  this.store_hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+  this.storenames = ['First & Pike','SeaTac Airport','Seattle Center','Capitol Hill','Alki'];
+}
+StoreLocation.protoype.randomCustomers = function() {
+  return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
 };
 StoreLocation.prototype.randomCookiesPerHour = function() {
   for(var i=0; i<this.store_hours.length; i++) {
@@ -64,7 +64,7 @@ StoreLocation.prototype.dataStore = function () {
 
 
 
-StoreLocation.prototype.createCookieData = function(){
+StoreLocation.prototype.createCookieDataTable = function(){
 
 //Ok! So this is all commented out, for one, because this is mostly Duncan's code from class! its the only example of us creating a table and from there I just tried to modify his model to fit my own. Ran into problems as soon as I started looping... FYI and I didn't really know how to start this
   var table = document.createElement('table');
@@ -85,7 +85,7 @@ StoreLocation.prototype.createCookieData = function(){
 
 
 
-StoreLocation.prototype.createTitles = function(){
+StoreLocation.prototype.createTitlesTable = function(){
 
 //Ok! So this is all commented out, for one, because this is mostly Duncan's code from class! its the only example of us creating a table and from there I just tried to modify his model to fit my own. Ran into problems as soon as I started looping... FYI and I didn't really know how to start this
   var table = document.createElement('table');
@@ -112,25 +112,9 @@ StoreLocation.prototype.createTitles = function(){
 
 
 
-/*
-  var Row, Store, value;
-  // create a new row for each item and add it to the table
-  for(var i = 0; i < this.store_names.length; i++){
-    Row = document.createElement('tr');
-    table.appendChild(Row);
-    Store = document.createElement('th');
-    Value  = document.createElement('td');
-    Value.textContent = store_hours[i] + ': ' + this.cookieshours[i];
-    itemPrice = document.createElement('td');
-    itemPrice.textContent = this.items[i].price;
-    Row.appendChild(store);
-    Row.appendChild(Value);
-    table.appendChild(Row);
-  }
+fun
 
-  return table;
-};
-*/
+
 
 var app = document.getElementById('app');
 

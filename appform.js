@@ -12,7 +12,7 @@ function StoreLocation(location, min, max, avgCookies) {
   this.store_hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
   this.storenames = ['First & Pike','SeaTac Airport','Seattle Center','Capitol Hill','Alki'];
 }
-StoreLocation.protoype.randomCustomers = function() {
+StoreLocation.prototype.randomCustomers = function() {
   return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
 };
 StoreLocation.prototype.randomCookiesPerHour = function() {
@@ -72,6 +72,8 @@ StoreLocation.prototype.dataStore = function () {
 //   app.appendChild(table);
 // };
 //
+var firstAND
+
 function handleSubmitLocation(event) {
   event.preventDefault();
   //streamline the code a little bit...
@@ -81,6 +83,7 @@ function handleSubmitLocation(event) {
   var maximum = form.maximum.value;
   var averageCookies = form.averageCookies.value;
   var listLocation = form.listSelect.value;
+  
 }
 
 var locationCreateForm = document.getElementById('formGenerator');

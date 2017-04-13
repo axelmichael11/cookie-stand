@@ -89,7 +89,6 @@ StoreLocation.prototype.createTitlesTable = function(){
 
 //Ok! So this is all commented out, for one, because this is mostly Duncan's code from class! its the only example of us creating a table and from there I just tried to modify his model to fit my own. Ran into problems as soon as I started looping... FYI and I didn't really know how to start this
   var table = document.createElement('table');
-  var titleHeading = document.createElement('th');
   var titleRow = document.createElement('tr');
 
   titleHeading.textContent = ' ';

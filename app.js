@@ -44,8 +44,7 @@ var store_names=
 
 
 var first_and_pike = {
-  location:'1st_and_Pike',
-  header:'h2',
+  location:'1st and Pike',
   min: 23,
   max: 65,
   avgCookies: 6.3,
@@ -64,15 +63,12 @@ var first_and_pike = {
     return this.cookieshours;
   },
   structureGenerator: function() {
-    var div = document.getElementsByClassName(this.location)[0];
-    var title = document.createElement(this.header);
-    title.textContent = this.location;
-    title.setAttribute('id','title');
-    //console.log(title);
-    div.appendChild(title);
+    var div = document.getElementById(this.location);
     var ul = document.createElement('ul');
-    ul.setAttribute('id',this.location);
+    ul.setAttribute('id','title');
     ul.textContent = this.location;
+    console.log(div);
+    console.log(ul);
     div.appendChild(ul);
   },
 
@@ -93,8 +89,7 @@ var first_and_pike = {
 };
 
 var Seattle_Center = {
-  location:'Seattle_Center',
-  header:'h4',
+  location:'Seattle Center',
   min: 11,
   max: 38,
   avgCookies: 3.7,
@@ -112,15 +107,12 @@ var Seattle_Center = {
     }
   },
   structureGenerator: function() {
-    var div = document.getElementsByClassName(this.location)[0];
-    var title = document.createElement(this.header);
-    title.textContent = this.location;
-    title.setAttribute('id','title');
-    //console.log(title);
-    div.appendChild(title);
+    var div = document.getElementById(this.location);
     var ul = document.createElement('ul');
-    ul.setAttribute('id',this.location);
+    ul.setAttribute('id','title');
     ul.textContent = this.location;
+    console.log(div);
+    console.log(ul);
     div.appendChild(ul);
   },
 
@@ -141,8 +133,7 @@ var Seattle_Center = {
 };
 
 var SeaTac_Airport = {
-  location:'SeaTac_Airport',
-  header:'h3',
+  location:'SeaTac Airport',
   min: 3,
   max: 24,
   avgCookies: 1.2,
@@ -160,15 +151,12 @@ var SeaTac_Airport = {
     }
   },
   structureGenerator: function() {
-    var div = document.getElementsByClassName(this.location)[0];
-    var title = document.createElement(this.header);
-    title.textContent = this.location;
-    title.setAttribute('id','title');
-    ////console.log(title);
-    div.appendChild(title);
+    var div = document.getElementById(this.location);
     var ul = document.createElement('ul');
-    ul.setAttribute('id',this.location);
+    ul.setAttribute('id','title');
     ul.textContent = this.location;
+    console.log(div);
+    console.log(ul);
     div.appendChild(ul);
   },
 
@@ -190,8 +178,7 @@ var SeaTac_Airport = {
 
 
 var Seattle_Center = {
-  location:'Seattle_Center',
-  header:'h4',
+  location:'Seattle Center',
   min: 11,
   max: 38,
   avgCookies: 3.7,
@@ -209,15 +196,12 @@ var Seattle_Center = {
     }
   },
   structureGenerator: function() {
-    var div = document.getElementsByClassName(this.location)[0];
-    var title = document.createElement(this.header);
-    title.textContent = this.location;
-    title.setAttribute('id','title');
-    //console.log(title);
-    div.appendChild(title);
+    var div = document.getElementById(this.location);
     var ul = document.createElement('ul');
-    ul.setAttribute('id',this.location);
+    ul.setAttribute('id','title');
     ul.textContent = this.location;
+    console.log(div);
+    console.log(ul);
     div.appendChild(ul);
   },
 
@@ -238,8 +222,7 @@ var Seattle_Center = {
 };
 
 var Capitol_Hill = {
-  location:'Capitol_Hill',
-  header:'h5',
+  location:'Capitol Hill',
   min: 20,
   max: 38,
   avgCookies: 2.3,
@@ -257,15 +240,12 @@ var Capitol_Hill = {
     }
   },
   structureGenerator: function() {
-    var div = document.getElementsByClassName(this.location)[0];
-    var title = document.createElement(this.header);
-    title.textContent = this.location;
-    title.setAttribute('id','title');
-    //console.log(title);
-    div.appendChild(title);
+    var div = document.getElementById(this.location);
     var ul = document.createElement('ul');
-    ul.setAttribute('id',this.location);
+    ul.setAttribute('id','title');
     ul.textContent = this.location;
+    console.log(div);
+    console.log(ul);
     div.appendChild(ul);
   },
 
@@ -288,7 +268,6 @@ var Capitol_Hill = {
 
 var Alki = {
   location:'Alki',
-  header:'h6',
   min: 2,
   max: 16,
   avgCookies: 4.6,
@@ -306,15 +285,12 @@ var Alki = {
     }
   },
   structureGenerator: function () {
-    var div = document.getElementsByClassName(this.location)[0];
-    var title = document.createElement(this.header);
-    title.textContent = this.location;
-    title.setAttribute('id','title');
-    //console.log(title);
-    div.appendChild(title);
+    var div = document.getElementById(this.location);
     var ul = document.createElement('ul');
-    ul.setAttribute('id',this.location);
+    ul.setAttribute('id','title');
     ul.textContent = this.location;
+    console.log(div);
+    console.log(ul);
     div.appendChild(ul);
   },
 

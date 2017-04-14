@@ -47,9 +47,9 @@ StoreLocation.prototype.randomCustomers = function() {
 StoreLocation.prototype.randomCookiesPerHour = function() {
   for(var i=0; i<this.store_hours.length; i++) {
     var avgCookies4Hour = Math.round(this.randomCustomers() * this.avgCookies);
-    this.totalCookies = totalCookies + avgCookies4Hour;
-    this.cookieshours.push(this.avgCookies4Hours);
-    console.log(this.totalCookies);
+    this.totalCookies = this.totalCookies + avgCookies4Hour;
+    this.cookieshours.push(avgCookies4Hour);
+    //console.log(this.totalCookies);
   }
 };
 StoreLocation.prototype.dataStore = function () {
@@ -83,7 +83,7 @@ StoreLocation.prototype.createCookiesData = function(){
   var store_name = document.createElement('td');
   store_name.textContent = this.location;
   tableRow.appendChild(store_name);
-
+  this.randomCookiesPerHour();
   for (var i= 0; i <this.store_hours.length; i++) {
     var cookieData = document.createElement('td');
     cookieData.textContent = this.cookieshours[i];

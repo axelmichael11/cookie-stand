@@ -85,7 +85,7 @@ function handleSubmitLocation(event) {
   var minimum = form.minimum.value;
   var maximum = form.maximum.value;
   var averageCookies = form.averageCookies.value;
-  var listLocation = form.listSelect.value;
+  // var listLocation = form.listSelect.value;
 
   var newStore = new StoreLocation(location, min, max, avgCookies);
   newStore.randomCookiesPerhour(); //?????

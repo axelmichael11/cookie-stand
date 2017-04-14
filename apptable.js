@@ -1,7 +1,6 @@
 'use strict';
-var table = document.getElementById('formGenerator');
 
-
+var store_hours= ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 function StoreLocation(location, min, max, avgCookies) {
   this.location = location;
@@ -11,31 +10,28 @@ function StoreLocation(location, min, max, avgCookies) {
   this.cookieshours = [];
   this.totalCookies = 0;
   this.data = [];
-  this.headers = [];
   this.store_hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
   this.storenames = ['First & Pike','SeaTac Airport','Seattle Center','Capitol Hill','Alki'];
 }
 StoreLocation.prototype.randomCustomers = function() {
   return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
 };
-
 StoreLocation.prototype.randomCookiesPerHour = function() {
   for(var i=0; i<this.store_hours.length; i++) {
     var avgCookies4Hour = Math.round(this.randomCustomers() * this.avgCookies);
     this.totalCookies = this.totalCookies + avgCookies4Hour;
     this.cookieshours.push(avgCookies4Hour);
+    //console.log(this.totalCookies);
   }
-  return this.cookieshours;
 };
-
 StoreLocation.prototype.dataStore = function () {
   this.data.push(this.location);
-  for (var i = 0; i < this.store_hours.length; i++) {
-    this.data.push(this.store_hours[i] + ': ' + this.cookieshours[i]);
+  for (var i = 0; i < store_hours.length; i++) {
+    this.data.push(store_hours[i] + ': ' + this.cookieshours[i]);
     + ' cookies';
   }
+  return this.data;
 };
-
 
 StoreLocation.prototype.createCookiesTitle = function(){
   var table = document.getElementById('app');
@@ -105,28 +101,4 @@ alki.createCookiesData();
 
 
 
-
-
-//Form Lab
-
-function handleSubmitLocation(event) {
-  event.preventDefault();
-  //streamline the code a little bit...
-  var form = event.target;
-  var storeLocation = form.storeLocation.value;
-  var minimum = form.minimum.value;
-  var maximum = form.maximum.value;
-  var averageCookies = form.averageCookies.value;
-  // var listLocation = form.listSelect.value;
-
-  var newStore = new StoreLocation(location, min, max, avgCookies);
-  newStore.randomCookiesPerhour(); //?????
-  newStore.showCookies(); //function to create cookie totals for the day??????
-
-
-  //clear values ????
-  form.reset();
-}
-
-var locationCreateForm = document.getElementById('formGenerator');
-locationCreateForm.addEventListener('submit', handleSubmitLocation);
+//FINISH...

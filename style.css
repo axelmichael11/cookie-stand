@@ -1,14 +1,12 @@
-/* reset */
-
 * {
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  font-family:Helvetica;
+  color:black;
 }
 
-html, body {
-  height: 100%;
-}
+
 
 body {
   background-color: lightblue;
@@ -16,4 +14,43 @@ body {
 
 div  {
   boroder: 2px dashed;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 100px;
+  text-align: center;
+  color:black;
+}
+
+
+
+#title {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  color:lightyellow;
+}
+
+table {
+  text-align: center;
+  margin:auto 50px;
+  background-color:#4da3ff;
+  border-radius: 5%;
+  padding:auto 80px;
+  font:'lobster';
+}
+
+table tr:first-child {
+  font-size: 40px;
+  margin:10px;
+  color:lightyellow
+  background-color:lightblue;
+}
+
+table tr {
+  font: 'Lobster';
+}
+
+table tr:2nd-child {
+  font:'lobster';
 }

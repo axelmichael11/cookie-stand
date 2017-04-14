@@ -2,34 +2,6 @@
 
 var store_hours= ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
-var store_names=
-['First & Pike','SeaTac Airport','Seattle Center','Capitol Hill','Alki'];
-
-// GroceryList.prototype.getTable = function(){
-//   var table = document.createElement('table');
-//
-//   var titleRow = document.createElement('tr');
-//   var titleHeading = document.createElement('th');
-//   titleHeading.textContent = this.title;
-//   titleRow.appendChild(titleHeading);
-//   table.appendChild(titleRow);
-//
-//   var itemRow, itemName, itemPrice;
-//   // create a new row for each item and add it to the table
-//   for(var i = 0; i < this.items.length; i++){
-//     itemRow = document.createElement('tr');
-//     itemName = document.createElement('td');
-//     itemName.textContent = this.items[i].name;
-//     itemPrice = document.createElement('td');
-//     itemPrice.textContent = this.items[i].price;
-//     itemRow.appendChild(itemName);
-//     itemRow.appendChild(itemPrice);
-//     table.appendChild(itemRow);
-//   }
-//
-//   return table;
-// };
-
 function StoreLocation(location, min, max, avgCookies) {
   this.location = location;
   this.min = min;
@@ -76,6 +48,24 @@ StoreLocation.prototype.createCookiesTitle = function(){
   table.appendChild(tableRow);
 };
 
+
+//Wait a second now... isn't this asking to create totals for all hours of each store??! not for the day...
+StoreLocation.prototype.createCookiesTotal = function(){
+  var table = document.getElementById('app');
+  var tableRow = document.createElement('tr');
+  tableRow.document.setAttribute('id','header');
+  console.log(tableRow);
+  var empty = document.createElement('td');
+  tableRow.appendChild(empty);
+
+  for (var i= 0; i <this.store_hours.length; i++) {
+    var titles = document.createElement('th');
+    titles.textContent = this.store_hours[i];
+    tableRow.appendChild(titles);
+  }
+  table.appendChild(tableRow);
+};
+
 StoreLocation.prototype.createCookiesData = function(){
   var table = document.getElementById('app');
   var tableRow = document.createElement('tr');
@@ -109,15 +99,6 @@ seattleCenter.createCookiesData();
 caphill.createCookiesData();
 alki.createCookiesData();
 
-pike.dataStore();
 
 
 //FINISH...
-
-
-
-//
-// StoreLocation.prototype.StoreData = function(datastore_hours) {
-//   var data = new Data(datastore_hours);
-//   this.data.push(data);
-// };

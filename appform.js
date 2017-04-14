@@ -119,9 +119,9 @@ function handleSubmitLocation(event) {
   var averageCookies = form.averageCookies.value;
   // var listLocation = form.listSelect.value;
 
-  var newStore = new StoreLocation(location, min, max, avgCookies);
-  newStore.randomCookiesPerhour(); //?????
-  newStore.showCookies(); //function to create cookie totals for the day??????
+  var newStore = new StoreLocation(location, parseInt(min), parseInt(max), avgCookies);
+  document.getElementById('sales-report').appendChild(newStore.createCookiesData());
+   //function to create cookie totals for the day??????
 
 
   //clear values ????

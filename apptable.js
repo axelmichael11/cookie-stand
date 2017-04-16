@@ -37,15 +37,21 @@ StoreLocation.prototype.createCookiesTitle = function(){
   var table = document.getElementById('app');
   var tableRow = document.createElement('tr');
   var empty = document.createElement('th');
-  empty.textContent = 'Store Name';
+  empty.setAttribute('id','data-titles');
+  empty.textContent = 'Store';
   tableRow.appendChild(empty);
 
   for (var i= 0; i <this.store_hours.length; i++) {
     var titles = document.createElement('th');
+    titles.setAttribute('id','data-titles');
     titles.textContent = this.store_hours[i];
     tableRow.appendChild(titles);
   }
   table.appendChild(tableRow);
+  var total = document.createElement('th');
+  total.setAttribute('id','data-titles');
+  total.textContent='Totals';
+  tableRow.appendChild(total);
 };
 
 /* CodeReview...
@@ -69,6 +75,7 @@ StoreLocation.prototype.generatedRow = function() {
 */
 
 //Wait a second now... isn't this asking to create totals for all hours of each store??! not for the day...
+/*
 StoreLocation.prototype.createCookiesTotal = function(){
   var table = document.getElementById('app');
   var tableRow = document.createElement('tr');
@@ -84,7 +91,7 @@ StoreLocation.prototype.createCookiesTotal = function(){
   }
   table.appendChild(tableRow);
 };
-
+*/
 StoreLocation.prototype.createCookiesData = function(){
   var table = document.getElementById('app');
   var tableRow = document.createElement('tr');
@@ -100,6 +107,9 @@ StoreLocation.prototype.createCookiesData = function(){
     tableRow.appendChild(cookieData);
   }
   table.appendChild(tableRow);
+  var total = document.createElement('td');
+  total.textContent='Total: '+this.totalCookies;
+  tableRow.appendChild(total);
 };
 
 

@@ -24,33 +24,36 @@ h1 {
 }
 
 
-
-#title {
-  font-family: 'Lobster', cursive;
-  font-size: 30px;
-  color:lightyellow;
-}
-
 table {
   text-align: center;
-  margin:auto 50px;
+  margin:30px auto;
+  padding: 60px 0px 60px 0px;
   background-color:#4da3ff;
-  border-radius: 5%;
-  padding:auto 80px;
+  border-radius: 20%;
   font:'lobster';
+  width:100%;
 }
 
-table tr:first-child {
-  font-size: 40px;
+/*table tr {
+  font: 'Lobster';
+}*/
+
+/*table tr:2nd-child {
+  font:'lobster';
+}*/
+
+#data-titles {
+  font-size: 30px;
   margin:10px;
   color:lightyellow
   background-color:lightblue;
+  font-family: 'lobster', cursive;
+  margin:20px;
+  width:100%;
 }
 
-table tr {
-  font: 'Lobster';
-}
-
-table tr:2nd-child {
-  font:'lobster';
+th {
+  margin: 10px auto;
+  padding:10px;
+  width: 100%;
 }

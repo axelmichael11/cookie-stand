@@ -44,6 +44,9 @@ var first_and_pike = {
       + ' cookies';
       ul.appendChild(li);
     }
+    var total = document.createElement('li');
+    total.textContent='Total: '+this.totalCookies;
+    ul.appendChild(total);
   },
   callfunction: function () {
     this.randomCookiesPerHour();
@@ -51,6 +54,7 @@ var first_and_pike = {
     this.listGenerator();
   }
 };
+console.log(first_and_pike.totalCookies);
 
 var Seattle_Center = {
   location:'Seattle Center',
@@ -88,7 +92,11 @@ var Seattle_Center = {
       + ' cookies';
       ul.appendChild(li);
     }
+    var total = document.createElement('li');
+    total.textContent='Total: '+this.totalCookies;
+    ul.appendChild(total);
   },
+
   callfunction: function () {
     this.randomCookiesPerHour();
     this.structureGenerator();
@@ -132,6 +140,9 @@ var SeaTac_Airport = {
       + ' cookies';
       ul.appendChild(li);
     }
+    var total = document.createElement('li');
+    total.textContent='Total: '+this.totalCookies;
+    ul.appendChild(total);
   },
   callfunction: function () {
     this.randomCookiesPerHour();
@@ -177,6 +188,9 @@ var Seattle_Center = {
       + ' cookies';
       ul.appendChild(li);
     }
+    var total = document.createElement('li');
+    total.textContent='Total: '+this.totalCookies;
+    ul.appendChild(total);
   },
   callfunction: function () {
     this.randomCookiesPerHour();
@@ -221,6 +235,9 @@ var Capitol_Hill = {
       + ' cookies';
       ul.appendChild(li);
     }
+    var total = document.createElement('li');
+    total.textContent='Total: '+this.totalCookies;
+    ul.appendChild(total);
   },
   callfunction: function () {
     this.randomCookiesPerHour();
@@ -266,6 +283,9 @@ var Alki = {
       + ' cookies';
       ul.appendChild(li);
     }
+    var total = document.createElement('li');
+    total.textContent='Total: '+this.totalCookies;
+    ul.appendChild(total);
   },
   callfunction: function () {
     this.randomCookiesPerHour();

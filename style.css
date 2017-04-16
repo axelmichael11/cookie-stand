@@ -16,15 +16,13 @@ body {
   background-color: lightblue;
 }
 
-div  {
-  boroder: 2px dashed;
-}
 
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 100px;
   text-align: center;
-  color:black;
+  color:salmon;
+  margin:30px 30px;
 }
 
 
@@ -32,13 +30,17 @@ h1 {
 #title {
   font-family: 'Lobster', cursive;
   font-size: 30px;
-  color:lightyellow;
+  color:navy;
 }
 
 div {
   text-align: center;
-  margin:10px 80px 30px 80px;
+  margin:10px 450px;
   background-color:#4da3ff;
   border-radius: 20%;
-  padding:auto 20px;
+  padding:20px;
+}
+
+#contact-info {
+  margin: 10px 250px;
 }

@@ -1,3 +1,5 @@
+/* reset */
+
 * {
   margin: 0;
   padding:0;
@@ -6,27 +8,46 @@
   color:black;
 }
 
-
+html, body {
+  height: 100%;
+}
 
 body {
   background-color: lightblue;
 }
 
-div  {
-  boroder: 2px dashed;
-}
 
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 100px;
   text-align: center;
-  color:black;
+  color:salmon;
+  margin:30px 30px;
 }
 
 
+
+#title {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  color:navy;
+}
+
+div {
+  text-align: center;
+  margin:10px 450px;
+  background-color:#4da3ff;
+  border-radius: 20%;
+  padding:20px;
+}
+
+#contact-info {
+  margin: 10px 250px;
+}
+
 table {
   text-align: center;
-  margin:30px auto;
+  margin:40px auto;
   padding: 60px 0px 60px 0px;
   background-color:#4da3ff;
   border-radius: 20%;
@@ -44,11 +65,10 @@ table {
 
 #data-titles {
   font-size: 30px;
-  margin:10px;
   color:lightyellow
   background-color:lightblue;
   font-family: 'lobster', cursive;
-  margin:20px;
+  /*margin:20px;*/
   width:100%;
 }
 

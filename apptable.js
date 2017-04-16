@@ -53,45 +53,6 @@ StoreLocation.prototype.createCookiesTitle = function(){
   total.textContent='Totals';
   tableRow.appendChild(total);
 };
-
-/* CodeReview...
-StoreLocation.prototype.generatedRow = function() {
-  var row= document.createElement('tr');
-  var storeName = document.createElement('td');
-  storeName.textContent=this.name;
-  row.appendChild(storeName);
-  return row;
-
-  var cookiesSoldTd;
-  for(var i=0; i< this.hourly CookiesSold.length; i++){
-    cookiesSold = document.createElement('td');
-    cookiesSold.textContent = this.hourlyCookiesSold[i];
-    row.appendChild(cookiesSold);
-  }
-  //var totalSold= document.createElement
-  totalSold,textContent = this.totalCookiesSold;
-  row.appendChild(totalsSold);
-};
-*/
-
-//Wait a second now... isn't this asking to create totals for all hours of each store??! not for the day...
-/*
-StoreLocation.prototype.createCookiesTotal = function(){
-  var table = document.getElementById('app');
-  var tableRow = document.createElement('tr');
-  tableRow.document.setAttribute('id','header');
-  console.log(tableRow);
-  var empty = document.createElement('td');
-  tableRow.appendChild(empty);
-
-  for (var i= 0; i <this.store_hours.length; i++) {
-    var titles = document.createElement('th');
-    titles.textContent = this.store_hours[i];
-    tableRow.appendChild(titles);
-  }
-  table.appendChild(tableRow);
-};
-*/
 StoreLocation.prototype.createCookiesData = function(){
   var table = document.getElementById('app');
   var tableRow = document.createElement('tr');

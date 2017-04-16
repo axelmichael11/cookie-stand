@@ -16,15 +16,13 @@ body {
   background-color: lightblue;
 }
 
-div  {
-  boroder: 2px dashed;
-}
 
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 100px;
   text-align: center;
-  color:black;
+  color:salmon;
+  margin:30px 30px;
 }
 
 
@@ -37,8 +35,45 @@ h1 {
 
 div {
   text-align: center;
-  margin:10px 80px 30px 80px;
+  margin:10px 50px;
+  background-color:#4da3ff;
+  border-radius: 10%;
+  padding:20px;
+}
+
+#contact-info {
+  margin: 10px 250px;
+}
+
+table {
+  text-align: center;
+  margin:40px auto;
+  padding: 60px 0px 60px 0px;
   background-color:#4da3ff;
   border-radius: 20%;
-  padding:auto 20px;
+  font:'lobster';
+  width:100%;
+}
+
+/*table tr {
+  font: 'Lobster';
+}*/
+
+/*table tr:2nd-child {
+  font:'lobster';
+}*/
+
+#data-titles {
+  font-size: 30px;
+  color:lightyellow
+  background-color:lightblue;
+  font-family: 'lobster', cursive;
+  /*margin:20px;*/
+  width:100%;
+}
+
+th {
+  margin: 10px auto;
+  padding:10px;
+  width: 100%;
 }
